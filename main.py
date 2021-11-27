@@ -28,10 +28,10 @@ def create_database():
 def insert_data(website_, username_, password_, note_):
     conn = sqlite3.connect('PASSWORDS.db')
     cursor = conn.cursor()
-    command = (f"""
+    command = f"""
                     insert into PASSWORD (Website, Username, Password, Note) 
                     VALUES ('{website_}', '{username_}', '{password_}', '{note_}');
-                """)
+                """
     count = cursor.execute(command)
     conn.commit()
 
@@ -67,4 +67,4 @@ def get_password(password_length):
 create_database()
 password = get_password(int(password_len))
 insert_data(website, username, password, notes)
-print("done")
+
