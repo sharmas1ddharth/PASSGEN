@@ -1,3 +1,3 @@
 # PASSGEN
 
-A Cross-platform open-source Password Manager.
+A Password Manager for terminal.
